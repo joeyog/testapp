@@ -1,0 +1,13 @@
+{
+  "name": "testapp",
+  "version": "0.0.0",
+  "homepage": "https://github.com/joeyog/testapp",
+  "authors": [
+    "James Long <james.long@paulsmith.co.uk>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
