@@ -25,7 +25,7 @@ $app->get('/name/{name}/age/{age}', function($name, $age) use($app) {
 //    $model->name = $name;
 //    $model->age = $age;
 
-    require_once __DIR__ . '../src/testapp/TestModel.php';
+//   require_once __DIR__ . '../src/testapp/TestModel.php';
 
     $myModel = new \testapp\TestModel($name, $age);
 
