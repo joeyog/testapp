@@ -2,6 +2,9 @@
 
 require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+
 $app = new Silex\Application();
 $app['debug'] = true;
 
@@ -19,11 +22,19 @@ $app->get('/about', function() use($app) {
     return $app['twig']->render('about.html');
 });
 
-$app->get('/name/{name}/age/{age}', function($name, $age) use($app) {
+$app->get('/form', function() use($app) {
 
-    $myModel = new \TestApp\TestModel($name, $age);
+    return $app['twig']->render('form.html');
+});
 
-    return $app['twig']->render('test.html', array('model' => $myModel));
+$app->post('/submit', function(Request $request) use($app) {
+
+    $firstName = $request->get('FirstName');
+    $lastName = $request->get('LastName');
+
+    $myModel = new \TestApp\TestModel($firstName, $lastName);
+
+    return $app['twig']->render('success.html', array('model' => $myModel));
 });
 
 $app->run();

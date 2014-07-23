@@ -17,36 +17,37 @@ class TestModel
     /**
      * @var string
      */
-    private $name;
+    private $firstName;
 
     /**
      * @var string
      */
-    private $age;
+    private $lastName;
 
     /**
-     * @param string $name
-     * @param string $age
+     * @param $firstName
+     * @param $lastName
      */
-    public function __construct($name, $age)
+    public function __construct($firstName, $lastName)
     {
-        $this->age = $age;
-        $this->name = $name;
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getAge()
+    public function getFirstName()
     {
-        return $this->age;
+        return $this->firstName;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getName()
+    public function getLastName()
     {
-        return $this->name;
+        return $this->lastName;
     }
+
 }
