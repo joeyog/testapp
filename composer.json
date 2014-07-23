@@ -3,5 +3,8 @@
         "silex/silex": "v1.2.1",
         "twig/twig": "1.*",
         "symfony/twig-bridge": "~2.3"
+    },
+    "autoload": {
+        "psr-0": {"TestApp\\": "src/"}
     }
 }

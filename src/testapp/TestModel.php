@@ -6,11 +6,11 @@
  * Time: 20:51
  */
 
-namespace testapp;
+namespace TestApp;
 
 /**
  * Class TestModel
- * @package testapp
+ * @package TestApp
  */
 class TestModel
 {

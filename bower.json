@@ -1,7 +1,7 @@
 {
-  "name": "testapp",
+  "name": "TestApp",
   "version": "0.0.0",
-  "homepage": "https://github.com/joeyog/testapp",
+  "homepage": "https://github.com/joeyog/TestApp",
   "authors": [
     "James Long <james.long@paulsmith.co.uk>"
   ],
