@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <link href="{{ app.request.basepath }}/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ app.request.basepath }}/scripts/main.css" rel="stylesheet">
-</head>
-<body>
+{% extends 'layout.html.twig' %}
 
+{% block content %}
 <form name="myForm" id="testForm" action="/index.php/submit" role="form" method="post">
     <label for="FirstName">First Name</label>
     <input name="FirstName" type="text" id="FirstName" class="form-control">
@@ -16,8 +10,4 @@
     <input type="checkbox" id="Agree" class="form-control">
     <input name="Submit" type="submit" >
 </form>
-
-<script src="{{ app.request.basepath }}/vendor/bootstrap/dist/js/bootstrap.js"></script>
-
-</body>
-</html>
+{% endblock %}
