@@ -34,7 +34,7 @@ $app->post('/submit', function(Request $request) use($app) {
 
     $myModel = new \TestApp\TestModel($firstName, $lastName);
 
-    return $app['twig']->render('success.html', array('model' => $myModel));
+    return $app['twig']->render('success.html.twig', array('model' => $myModel));
 });
 
 $app->run();
