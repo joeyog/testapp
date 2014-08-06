@@ -15,7 +15,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 $app->get('/', function() use($app) {
-    return $app['twig']->render('index.html');
+    return $app['twig']->render('index.html.twig');
 });
 
 $app->get('/about', function() use($app) {
@@ -24,7 +24,7 @@ $app->get('/about', function() use($app) {
 
 $app->get('/form', function() use($app) {
 
-    return $app['twig']->render('form.html');
+    return $app['twig']->render('form.html.twig');
 });
 
 $app->post('/submit', function(Request $request) use($app) {
