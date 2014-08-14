@@ -27,6 +27,11 @@ $app->get('/form', function() use($app) {
     return $app['twig']->render('form.html.twig');
 });
 
+$app->get('/user', function() use($app) {
+
+    return $app['twig']->render('user.html.twig');
+});
+
 $app->post('/submit', function(Request $request) use($app) {
 
     $firstName = $request->get('FirstName');
@@ -35,6 +40,22 @@ $app->post('/submit', function(Request $request) use($app) {
     $myModel = new \TestApp\TestModel($firstName, $lastName);
 
     return $app['twig']->render('success.html.twig', array('model' => $myModel));
+});
+
+$app->post('/submituser', function(Request $request) use($app) {
+
+    $firstName = $request->get('FirstName');
+    $lastName = $request->get('LastName');
+    $address1 = $request->get('Address1');
+    $address2 = $request->get('Address2');
+    $address3 = $request->get('Address3');
+    $email = $request->get('Email');
+    $phone = $request->get('Phone');
+    
+
+    $userModel = new \TestApp\UserModel($firstName, $lastName, $address1, $address2, $address3, $email, $phone);
+
+    return $app['twig']->render('usersuccess.html.twig', array('model' => $userModel));
 });
 
 $app->run();

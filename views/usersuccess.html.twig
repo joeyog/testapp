@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+<ul>
+<li>First Name{{ model.firstName }}</li>
+<li>{{ model.lastName }}</li>
+<li>{{ model.address1 }}</li>
+<li>{{ model.address2 }}</li>
+<li>{{ model.address3 }}</li>
+<li>{{ model.email }}</li>
+<li>{{ model.phone }}</li>
+</ul>
+
+{% endblock %}
