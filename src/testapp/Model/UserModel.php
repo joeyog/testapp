@@ -6,7 +6,7 @@
  * Time: 20:51
  */
 
-namespace TestApp;
+namespace TestApp\Model;
 
 /**
  * Class TestModel

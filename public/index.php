@@ -70,7 +70,7 @@ $app->post('/submituser', function(Request $request) use($app) {
     $phone = $request->get('Phone');
     
 
-    $userModel = new \TestApp\UserModel($firstName, $lastName, $address1, $address2, $address3, $email, $phone);
+    $userModel = new \TestApp\Model\UserModel($firstName, $lastName, $address1, $address2, $address3, $email, $phone);
 
     return $app['twig']->render('usersuccess.html.twig', array('model' => $userModel));
 });
