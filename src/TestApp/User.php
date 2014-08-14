@@ -12,7 +12,7 @@ namespace TestApp;
  * Class TestModel
  * @package TestApp
  */
-class TestModel
+class User
 {
     /**
      * @var string
@@ -49,5 +49,4 @@ class TestModel
     {
         return $this->lastName;
     }
-
 }
