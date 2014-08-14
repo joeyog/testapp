@@ -5,7 +5,7 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'vendo
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-$db = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', 'root');
+$db = new PDO('mysql:host=localhost;dbname=testapp;charset=utf8', 'testapp', 'testapp');
 
 $app = new Silex\Application();
 $app['debug'] = true;
