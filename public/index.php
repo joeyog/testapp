@@ -5,8 +5,14 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'vendo
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+$db = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', 'root');
+
 $app = new Silex\Application();
 $app['debug'] = true;
+
+$app['db'] = function() use ($db) {
+    return new \TestApp\Db\Connection($db);
+};
 
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
@@ -33,6 +39,17 @@ $app->get('/user', function() use($app) {
 });
 
 $app->post('/submit', function(Request $request) use($app) {
+
+    /**
+     * @var \TestApp\Db\Connection
+     */
+    $dbConnection = $app['db'];
+
+    $results = $dbConnection->query("select * from test");
+
+    echo('<pre>');
+    var_dump($results);
+    echo '</pre>';
 
     $firstName = $request->get('FirstName');
     $lastName = $request->get('LastName');
