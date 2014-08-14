@@ -54,7 +54,7 @@ $app->post('/submit', function(Request $request) use($app) {
     $firstName = $request->get('FirstName');
     $lastName = $request->get('LastName');
 
-    $myModel = new \TestApp\User($firstName, $lastName);
+    $myModel = new \TestApp\Model\User($firstName, $lastName);
 
     return $app['twig']->render('success.html.twig', array('model' => $myModel));
 });

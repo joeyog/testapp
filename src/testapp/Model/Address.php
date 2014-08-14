@@ -5,7 +5,7 @@
  * Time: 18:51
  */
 
-namespace TestApp;
+namespace TestApp\Model;
 
 /**
  * Class Address
